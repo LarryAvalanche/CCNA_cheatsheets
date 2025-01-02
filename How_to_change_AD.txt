@@ -1,0 +1,9 @@
+Yangon to Mandalay - 2 Routes
+RIP - AD - 120 (Default)
+Static - AD - 1 (Default) - Change AD to 130 to make backup link
+
+R0(config)#ip route 192.168.2.0 255.255.255.0 10.1.2.2 130
+
+To disable RIP's auto-summary feature
+R0(config)#router rip
+R0(config-router)#no auto-summary

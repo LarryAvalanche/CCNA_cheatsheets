@@ -1,0 +1,21 @@
+BW Allocation for Simple Queue 
+
+Total = 15M
+		A	B	C
+Max Limit	5	8	7
+Limit at 	2	2	4
+Priority	2	7	4
+Available BW	?	?	?	
+
+Total = 15M 
+Max Limit = 5+8+7 = 20M 
+Limit at  = 2+2+4 = 8M
+remaining BW/available BW = 15 - 8 = 7Mbps (split among users) 
+
+Priority = 1 to 8 , 1 = highest priority (last drop) , ----  P = 8 = lowest priority ( first drop )
+
+User A (P=2) ->  Limit at = 2, Max=5 , remaining BW = 7 - 3 = 4Mbps , A  -> 5 Mbps
+User C (P=4) ->  Limit at = 4, Max=7 , remaining BW = 4 - 3 = 1Mbps,  C  -> 4 + 3 = 7Mbps
+User B (P=7) ->  Limit at = 2, Max=8 , remaining BW = 1 - 1 = 0Mbps,  B  -> 2 + 1 = 3Mbps
+
+	

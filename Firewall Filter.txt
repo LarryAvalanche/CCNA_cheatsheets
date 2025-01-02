@@ -1,0 +1,63 @@
+Firewall
+
+INPUT
+PC (LAN)  -> Router   
+WAN      - > Router 
+
+PC  -> http://192.168.254.1    Block / Reject 
+
+---------------------------------------------------------------------------
+
+FORWARD 
+LAN -> R  -> WAN   ( forward )
+WAN -> R  -> LAN   ( forward ) 
+LAN -> R ->  LAN   ( forward )
+
+PC -> Block ping to 8.8.8.8 through Router 
+
+--------------------------------------------------------------------------
+OUTPUT 
+
+Router -> PC  (LAN)
+Router -> WAN 
+
+R -> Block ping to 8.8.8.8  
+
+---------------------------------------------------------------------------
+ADDRESS LIST  & LOG
+
+PC -> ping to www.mikrotik.com 
+action : add to src address list
+
+PC -> block http://www.mikrotik.com from address list 
+LOG
+
+Drop Specific Web Site for LAN ( Testing )
+ 
+----------------------------------------------------------------------
+
+CONNECTION STATE  
+
+Connection : new, established, related 
+
+ping 
+PC   -------------- >  Router   (new)            block 
+Router  ------------>  PC	(established)
+
+
+ping 
+R  -------------- >   PC  (new)
+PC  -------------->   R	  (established)          accept
+
+PC ->  Block only  PC ( 192.168.254.100)  ping to Router ( 192.168.254.1)
+Router can ping PC
+
+block all inbound traffic from Internet (WAN Interface )except for ICMP (ping) 
+
+
+---------------------------------------------------------------------------
+
+(ICMP)  Advanced  -> ICMP OPTIONS 
+
+
+

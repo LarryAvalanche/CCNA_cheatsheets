@@ -1,0 +1,29 @@
+Switch(config)#sdm prefer routing
+Switch(config)#end
+Switch#show sdm prefer
+
+Switch>en
+Switch#show sdm prefer
+ The current template is "routing" template.
+ The selected template optimizes the resources in
+ the switch to support this level of features for
+ 8 routed interfaces and 1024 VLANs.
+
+  number of unicast mac addresses:                  3K
+  number of IPv4 IGMP groups + multicast routes:    1K
+  number of IPv4 unicast routes:                    11K
+  number of directly-connected IPv6 addresses:      3K
+  number of indirect IPv6 unicast routes:           8K
+  number of IPv4 policy based routing aces:         0.5K
+  number of IPv4/MAC qos aces:                      0.5K
+  number of IPv4/MAC security aces:                 1K
+
+Switch#config t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Switch(config)#ip routing
+Switch(config)#int vlan 10
+Switch(config-if)#ip address 10.1.10.1 255.255.255.0
+Switch(config-if)#int vlan 20
+Switch(config-if)#ip address 10.1.20.1 255.255.255.0
+Switch(config-if)#int vlan 30
+Switch(config-if)#ip address 10.1.30.1 255.255.255.0

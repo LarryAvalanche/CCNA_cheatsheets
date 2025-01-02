@@ -1,0 +1,7 @@
+VLANs
+What are different departments?
+1. Sales & support Vlan
+2. Marketing Vlan
+3. Warehouse Vlan
+4. IT Vlan
+5. Management Vlan

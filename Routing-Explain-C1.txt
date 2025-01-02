@@ -1,0 +1,20 @@
+If there are two or more routes pointing to the same address, the more precise one will be used
+Dst: 192.168.90.0/24, gateway: 1.2.3.4     ( 90.1 to 90.254 )
+Dst: 192.168.90.128/25, gateway: 5.6.7.8   ( 90.129 to 90.254)
+If a packet needs to be sent to 192.168.90.135,    5.6.7.8
+
+
+192.168.90.0/24, gateway: 1.2.3.4        ( 90.1 to 90.254 )
+192.168.90.0/25 , gateway: 5.6.7.8       ( 90.1 to 90.126 )
+If a packet needs to be sent to 192.168.90.135, 1.2.3.4
+
+
+Routes                            AD
+192.168.1.0/24 	Gateway	1.1.1.1   0
+192.168.1.0/25 	Gateway	2.2.2.2   1
+192.168.1.0/25 	Gateway	3.3.3.3   5
+192.168.1.100  which Route ???  2.2.2.2
+
+
+
+

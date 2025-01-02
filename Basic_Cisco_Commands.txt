@@ -1,0 +1,31 @@
+Switch>show
+Switch>enable
+Switch#config t
+Switch(config)#line con 0
+Switch(config-line)#password password-123
+Switch(config-line)#login
+
+
+Switch(config)#line vty 0 15
+Switch(config-line)#password password-123
+Switch(config-line)#login
+
+Switch(config-line)#end
+Switch#show run
+
+Cisco Catalyst switches come ready to get busy switching frames because of settings like
+these:
+■ The interfaces are enabled by default, ready to start working once a cable is connected.
+■ All interfaces are assigned to VLAN 1.
+■ 10/100 and 10/100/1000 interfaces use autonegotiation by default.
+■ The MAC learning, forwarding, flooding logic all works by default.
+■ STP is enabled by default.
+
+Switch#config t
+Switch(config)#int vlan 1
+Switch(config-if)#ip address 172.16.1.100 255.255.255.0
+Switch(config-if)#no shutdown
+
+Sw1#show interfaces status 
+Sw1(config)#username zmm secret password-123
+Sw1(config)#ip default-gateway 172.16.1.100

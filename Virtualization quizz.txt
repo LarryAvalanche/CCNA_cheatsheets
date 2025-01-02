@@ -1,0 +1,166 @@
+1. What is a virtual machine (VM)?
+   Ans: A software-based emulation of a physical computer
+
+2. What is the primary purpose of a hypervisor in virtualization?
+   Ans :  To allocate hardware resources and manage virtual machines
+
+3. In virtualization, what is the guest operating system?
+   Ans : The operating system installed on a virtual machine
+
+4. What does virtual machine isolation mean?
+   Ans : Virtual machines run independently and are isolated from each other and the host system.
+
+5. What is a snapshot in virtualization?
+   Ans : A point-in-time image of the virtual machine’s state
+
+6. Which component allocates hardware resources to virtual machines?
+   Ans :  Hypervisor
+
+7.  What is the benefit of virtual machine portability?
+   Ans : It allows virtual machines to be moved between different physical machines with compatible hypervisors.
+
+8. Which technology enables server consolidation through virtualization?
+   Ans : Hypervisor
+
+9. What is the purpose of cloning a virtual machine?
+   Ans : To create an identical copy of the virtual machine for deployment or testing
+
+10. In virtualization, what is a host system?
+   Ans :  The main operating system running on a physical machine
+
+11. What is the purpose of server consolidation in virtualization?
+   Ans :  To reduce hardware costs and energy consumption
+
+12. What does virtualization allow in terms of hardware resource allocation?
+   Ans :  Hypervisor dynamically allocates hardware resources to virtual machines based on their demands.
+
+13. Which virtualization technology is developed by VMware?
+   Ans : vSphere
+
+14. What is the main advantage of using virtual machines for software testing and development?
+   Ans : Isolation of testing environments from the host system
+
+15. How does virtualization contribute to resource efficiency in data centers?
+   Ans : By allowing multiple virtual machines to run on a single physical machine
+
+16. What is the purpose of a virtual disk manager in virtualization?
+   Ans : To create virtual hard disks for virtual machines
+
+17. What is the primary function of a hypervisor in virtualization?
+   Ans : To allocate hardware resources to virtual machines
+
+18. Which type of virtualization allows multiple virtual machines to share the same operating system kernel?
+   Ans : Containerization
+
+19. How can virtual machines improve disaster recovery?
+   Ans : By enabling VM migration to another physical host in case of failure
+
+20. In virtualization, what is the purpose of using snapshots?
+   Ans : To revert a virtual machine to a previous state
+
+21. What is the benefit of using virtual machines in cloud computing?
+   Ans : Virtual machines enable efficient resource allocation and cost savings.
+
+22. How do virtual machines contribute to hardware consolidation in data centers?
+   Ans : By allowing multiple physical servers to share the same hardware
+
+23. Which of the following is a key characteristic of virtual machines?
+   Ans : They provide isolation between different virtual machines.
+
+24. What is the purpose of a virtual switch in virtualization?
+   Ans : To provide a dedicated network connection for each virtual machine
+
+25.  How do virtual machines facilitate software testing and development?
+   Ans : By isolating development environments from the host system
+
+26. Which of the following virtualization technologies is open-source?
+   Ans : Oracle VirtualBox
+
+27. What is the primary benefit of using virtual machines in data centers?
+   Ans : Enhanced security through hardware isolation
+
+28.  Which of the following is a use case for virtual machines?
+   Ans : Hosting multiple websites on a single physical server
+
+29. What is the main purpose of virtual machine snapshots?
+   Ans : To revert virtual machines to a previous state
+
+30.  What does virtual machine portability mean?
+   Ans : The ability to move virtual machines between physical servers
+
+31. What is Virtualization?
+   Ans : Transforming hardware into service
+
+32. What are the benefits to virtualization?
+   Ans : Cost savings, reduce downtime, ease of configuration, centralized management
+
+33. What is the difference between Cloud computing and Virtualization?
+   Ans : Virtualization requires an administrator to manage the virtualized environment, where cloud computing services are managed by API's
+
+34. What is a Hypervisor?
+   Ans : A hypervisor is computer software or hardware that creates and runs virtual machines.
+
+35. What does VM stand for?
+   Ans : Virtual Machine
+
+36. How is virtualization managed?
+   Ans : By an administrator who uses software called a hypervisor to create and run virtual machines
+
+37. Which of the following are types of virtualization?
+   Ans : 3CX and Microsoft OneDrive
+
+38. Which of the following are advantages of virtualization?
+   Ans : Efficient Hardware Utilization , Save space in your data center and Save energy
+
+39. Which of the following are disadvantages of virtualization?
+   Ans : Software licensing and Learning the new infrastructure
+
+40. which hypervisor will be supporting the linux operating systems?
+   Ans : KVM(Kernel virtual machine)
+
+VDI : Virtual Desktop Infrastructure
+
+41. Which of the following is an example of on-premises VDI solution?
+   Ans : Local server hosting virtualized OS
+
+42.  In a persistent VDI:
+   Ans : Each user runs their own copy of virtual desktop
+         At the end of a session, user data and personal settings are saved
+
+43. Which of the answers listed below describe the characteristics of a non-persistent VDI?
+   Ans : At the end of a session, user desktop reverts to its original state.
+         Virtual desktop is shared among multiple users.
+
+44. Which of the following answers refers to a cloud-based VDI service?
+   Ans : Desktop as as Service (DaaS)
+
+45. Which of the terms listed below refers to a solution that allows multiple operating systems to work simultaneously on the same hardware?
+   Ans : Virtualization
+
+46. In virtualization technology, a software program that manages multiple operating systems (or multiple instances of the same operating system) on a single computer system is known as:
+   Ans : Hypervisor 
+
+47. Which of the following statements describe disadvantages of virtualization? 
+   Ans : Multiple virtual machines run on a single host share hardware resources which has a degrading effect on performance.
+         Hardware used for hosting virtual machines becomes a single point of failure.
+
+48. For best performance, a custom workstation designed for virtualization tasks needs: 
+   Ans : Large, fast hard drive
+         Maximum RAM
+         Maximum CPU cores
+
+49. A set of Intel CPU HAV enhancements is called: VT-x
+
+50.  Which of the answers listed below refers to HAV enhancements developed by AMD for its CPUs? Ans : AMD-V 
+
+51. The term "VM sprawl" is used to describe a situation in which large number of deployed virtual machines lack proper administrative controls.
+    TRUE
+
+52. The term "VM escape" refers to the process of breaking out of the boundaries of a guest operating system installation to access the primary hypervisor controlling all the virtual machines on the host machine.
+    TRUE
+
+53. Which of the following security measures can be used to prevent VM sprawl?
+    Ans : Usage audit &  Asset documentation
+
+54. What are the countermeasures against VM escape?
+    Ans : Sandboxing & Patch Management

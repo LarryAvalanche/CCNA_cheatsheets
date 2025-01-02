@@ -1,0 +1,8 @@
+
+int E0
+ip access-group 101 out
+
+access-list 101 deny tcp host 172.16.3.10 any eq 21/ftp
+access-list 101 deny tcp host 172.16.2.10 host 172.16.1.100 eq www/80
+access-list 101 permit ip any
+

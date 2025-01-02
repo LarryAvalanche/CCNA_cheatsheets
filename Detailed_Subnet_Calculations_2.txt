@@ -1,0 +1,31 @@
+===Revision of IPv4 subnet concepts===
+192.168.1.0/26
+11111111.11111111.11111111.11000000
+nnnnnnnn.nnnnnnnn.nnnnnnnn.sshhhhhh
+255.255.255.192
+no. of subnets = 2^s= 2^2= 4 subnets
+magic no. => 2^h =2^6=64
+1st subnet => 192.168.1.0/26
+2nd subnet => 192.168.1.64
+3rd subnet => 192.168.1.128
+4th subnet => 192.168.1.192
+=======================================
+G0/0=> 2001:0DB8:1111:1:0000:0000:0000:0001
+PC1 => 2001:0DB8:1111:1:0000:0000:0000:0009
+
+===IPv6 address configuration on routers===
+Router(config-if)#ipv6 address 2001:db8:1111:1::1/64
+Router(config-if)#no shut
+
+Router#sh ipv6 int brief
+Router#sh ipv6 route
+Router#sh ipv6 int fa0/0
+
+Table 24.2
+2001:0DB8:0001:0001:0213:ABFF:FEAB:1001
+2001:0DB8:0001:0001:AC13:ABFF:FEAB:1001
+2001:0DB8:0001:0001:020C:BEFF:FEEF:CAFE
+2001:0DB8:0001:0001:BA0C:BEFF:FEEF:CAFE
+2001:0DB8:0001:0001:0C0C:ABFF:FEAC:CABA
+
+ipv6 address 2001:DB8:1111:1::/64 eui-64

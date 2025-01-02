@@ -1,0 +1,109 @@
+Firewall
+
+INPUT
+PC (LAN)  -> Router   
+WAN      - > Router 
+
+PC  -> http://192.168.254.1    Block / Reject 
+
+---------------------------------------------------------------------------
+
+FORWARD 
+LAN -> R  -> WAN   ( forward )
+WAN -> R  -> LAN   ( forward ) 
+LAN -> R ->  LAN   ( forward )
+
+PC -> Block ping to 8.8.8.8 through Router 
+
+--------------------------------------------------------------------------
+OUTPUT 
+
+Router -> PC  (LAN)
+Router -> WAN 
+
+R -> Block ping to 8.8.8.8  
+
+---------------------------------------------------------------------------
+ADDRESS LIST  & LOG
+
+PC -> ping to 8.8.8.8 
+action : add to src address list
+
+PC -> block http://www.mikrotik.com from address list 
+LOG
+
+Drop Specific Web Site for LAN ( Testing )
+ 
+----------------------------------------------------------------------
+
+CONNECTION STATE  
+
+Connection : new, established, related 
+
+ping 
+PC   -----echo-request--------- >  Router   (new)            block 
+Router  ---echo-reply--------->    PC	    (established)
+
+
+ping 
+R  -------echo-request------- >   PC      (new)
+PC  ------echo-reply-------->     R	  (established)       accept
+
+PC ->  Block only  PC ( 192.168.254.100)  ping to Router ( 192.168.254.1)
+Router can ping PC
+
+
+chain : input , src add: 192.168.254.100, protocol icmp
+action : drop 
+
+PC ping R   ( block )
+R  ping PC  ( block )
+
+chain : input , src add: 192.168.254.100, protocol icmp, connection state : new
+action : drop 
+
+PC ping R   ( block )
+R  ping PC  ( accept )
+(OR)
+chain : input , src add: 192.168.254.100, protocol icmp, connection state : established
+action : accept 
+chain : input , src add: 192.168.254.100, protocol icmp
+action : drop
+
+PC ping R   (  block  )
+R  ping PC  (  accept  )
+
+
+
+---------------------------------------------------------------------------
+
+(ICMP)  Advanced  -> ICMP OPTIONS   echo-request, echo-reply 
+
+icmp (ping) => echo-request, echo-reply 
+icmp types 
+
+
+chain : input , src add: 192.168.254.100, protocol icmp
+advanced -> imcp options -> echo-request  
+action : drop 
+
+
+
+-----------------------
+
+Block Google Traffic 
+
+
+chain: forward , dest add :                   , protocol : tcp , dest port : 443
+action: drop 
+
+
+-----------------------------------------------------------------------------
+
+
+
+
+
+
+
+
